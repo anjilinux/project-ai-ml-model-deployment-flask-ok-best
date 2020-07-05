@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark text-white">Cancer Predictor Application</nav>
+    <div class="jumbotron">
+        {% if p %}
+            <div class="alert alert-danger">{{p}}</div>
+        {% endif %}
+        {% if s %}
+            <div class="alert alert-success">{{s}}</div>
+        {% endif %}
+        <form class="form-group" action="/" method="POST">
+            <label for="age">Age : </label>
+            <input type="number" name="age" class="form-control">
+            </br>
+            <label for="bmi">BMI : </label>
+            <input type="number" name="bmi" class="form-control">
+            </br>
+            <label for="glucose">Glucose : </label>
+            <input type="number" name="glucose" class="form-control">
+            </br>
+            <label for="insulin">Insulin : </label>
+            <input type="number" name="insulin" class="form-control">
+            </br>
+            <label for="homa">HOMA : </label>
+            <input type="number" name="homa" class="form-control">
+            </br>
+            <label for="Leptin">Leptin : </label>
+            <input type="number" name="Leptin" class="form-control">
+            </br>
+            <label for="Adiponectin">Adiponectin : </label>
+            <input type="number" name="Adiponectin" class="form-control">
+            </br>
+            <label for="Resistin">Resistin : </label>
+            <input type="number" name="Resistin" class="form-control">
+            </br>
+            <label for="mcp1">MCP-1 : </label>
+            <input type="number" name="mcp1" class="form-control">
+            </br>
+            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </form>
+    </div>
+    
+</body>
+</html>
