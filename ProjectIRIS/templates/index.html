@@ -35,9 +35,27 @@
     <h5 class="my-0 mr-md-auto font-weight-normal">Project IRIS Classification</h5>
     </div>
 
-    <div class="container p-3 my-3 bg-secondary text-white">
-    <form>
+    
 
+    <div class="container p-3 my-3 bg-secondary text-white">
+      {% if setosa %}
+        <div class="alert alert-primary">{{setosa}}</div>
+      {% elif versicolor %}
+        <div class="alert alert-primary">{{versicolor}}</div>
+      {% elif virginica %}
+        <div class="alert alert-primary">{{virginica}}</div>
+      {% endif %}
+    <form class="form-group" action="/" method="POST">
+      <label for="sepallength">Sepal Length :</label>
+      <input class="form-control" type="number" name="sepallength">
+      <label for="sepalwidth">Sepal Width :</label>
+      <input class="form-control" type="number" name="sepalwidth">
+      <label for="petallength">Petal Length :</label>
+      <input class="form-control" type="number" name="petallength">
+      <label for="petalwidth">Petal Width :</label>
+      <input class="form-control" type="number" name="petalwidth">
+    </br>
+      <button class="btn btn-dark" type="submit" name="submit">Submit</button>
     </form>
     </div>
 
